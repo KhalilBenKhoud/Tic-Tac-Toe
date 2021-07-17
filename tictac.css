@@ -1,0 +1,202 @@
+* {
+    margin: 0;
+    bottom: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: threedfont ;
+    src:  url("mexcellent 3d.otf") format("opentype");
+          
+  }
+
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   min-height: 100vh;
+}
+
+.cart {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    margin-top: 25px;
+    
+}
+
+.case {
+    border: 1px solid black;
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    color: rgba(128, 128, 128, 0.4) ;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    font-size: 3rem;
+    
+}
+
+
+.click {
+    color: black ;
+    cursor: not-allowed;
+}
+
+.case:first-child,
+.case:nth-child(2),
+.case:nth-child(3)
+{
+    border-top: none;
+    
+}
+
+.case:first-child,
+.case:nth-child(4),
+.case:nth-child(7)
+{
+    border-left: none;
+}
+
+.case:nth-child(7),
+.case:nth-child(8),
+.case:nth-child(9)
+{
+    border-bottom: none;
+}
+
+.case:nth-child(3),
+.case:nth-child(6),
+.case:nth-child(9)
+{
+    border-right: none;
+}
+
+.alert {
+    background-color: rgba(0, 0, 0, 0.637);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 4rem;
+}
+
+.alert button {
+    outline: none;
+    border: none;
+    padding: 10px 40px;
+    margin: 20px;
+    font-size: 1.5rem;
+    background-color: grey;
+    color: black;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+.alert button:hover{
+    transform: scale(1.05);
+    color: white ;
+}
+
+.option {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.option > div {
+   margin: 0px 10px ;
+   padding: 10pX; 
+   border: 1px dotted black;
+   background-color: rgba(46, 138, 86,0.6);
+   cursor: pointer;
+   font-family: threedfont, Georgia, 'Times New Roman', Times, serif ;
+   font-size: 2rem;
+  
+}
+
+@media screen and (max-width: 605px) {
+    .option{
+        flex-direction : column ;
+        justify-content: center;
+        margin: 15px;
+    }
+    .option > div {
+        margin: 10px 5px ; 
+        font-size: 1.4rem;
+        width: 270px;
+    }
+    .starting {
+        margin: 0px 20px;
+       
+    }
+    .starting p {
+        font-style:oblique;
+        margin-left: 25px;
+    }
+     
+    
+}
+
+
+
+
+
+.option > div:hover {
+
+    background-color: rgba(46, 138, 86,1);
+    
+}
+.starting {
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0px;
+    font-size: 1.1rem;
+}
+
+.starting p {
+    font-style:oblique;
+}
+
+.starting > div {
+
+   padding: 7px;
+   cursor:pointer ;
+   
+}
+
+.starting > div:nth-child(2){
+    border-right: 1px solid rgb(199, 20, 20); 
+    
+}
+
+.starting > div:nth-child(3){
+    border-left: 1px solid rgb(199, 20, 20);
+    
+}
+
+.starting > div:nth-child(2):hover {
+    
+    font-weight: 1000;
+    border: 1px solid rgb(150, 143, 143);
+    border-right:  1px solid rgb(199, 20, 20) ;
+    background-color: rgba(128, 128, 128, 0.329);
+}
+
+.starting > div:nth-child(3):hover {
+    
+    font-weight: 1000;
+    border: 1px solid rgb(150, 143, 143);
+    border-left:  1px solid rgb(199, 20, 20) ;
+    background-color: rgba(128, 128, 128, 0.329);
+
+}
+
